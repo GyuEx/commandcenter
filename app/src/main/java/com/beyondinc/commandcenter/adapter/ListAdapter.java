@@ -20,7 +20,7 @@ public class ListAdapter {
     @BindingAdapter("text_color")
     public static void setTextColor(TextView view, int velue)
     {
-        if(velue < 5){
+        if(velue < 7){
             view.setTextColor(Color.parseColor("#FFFF0000"));
         }
         else
