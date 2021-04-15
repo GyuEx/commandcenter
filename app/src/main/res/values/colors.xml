@@ -24,5 +24,7 @@
     <color name="complite">#FF005CFF</color>
     <color name="pickup">#FF1C8B00</color>
 
+    <color name="edittext">#FF17488A</color>
+
 
 </resources>

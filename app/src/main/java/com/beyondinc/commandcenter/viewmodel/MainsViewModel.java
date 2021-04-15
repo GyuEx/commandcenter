@@ -8,6 +8,8 @@ import android.widget.TableRow;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import com.beyondinc.commandcenter.util.Vars;
+
 public class MainsViewModel extends ViewModel {
 
     public MutableLiveData<Integer> layer = new MutableLiveData<>();
@@ -16,12 +18,19 @@ public class MainsViewModel extends ViewModel {
 
     public MainsViewModel(){
         Log.e(Tag,"ViewModel Enable");
-        layer.postValue(1);
+        layer.postValue(0);
     }
 
     public void setLayoutBtn1()
     {
-        layer.postValue(1);
+        if(layer.getValue() == 1)
+        {
+            layer.postValue(0);
+        }
+        else
+        {
+            layer.postValue(1);
+        }
     }
     public void setLayoutBtn2()
     {

@@ -15,13 +15,12 @@ import android.view.ViewGroup;
 
 import com.beyondinc.commandcenter.R;
 import com.beyondinc.commandcenter.databinding.FragmentOrderBinding;
-import com.beyondinc.commandcenter.viewmodel.ItemViewModel;
-import com.beyondinc.commandcenter.viewmodel.OrderViewModel;
+import com.beyondinc.commandcenter.viewmodel.MainsViewModel;
 
 public class OrderFragment extends Fragment {
 
     FragmentOrderBinding binding;
-    OrderViewModel viewModel;
+    MainsViewModel viewModel;
 
     public static Fragment fr,listfrag;
     public static FragmentTransaction fragmentTransaction = null;
@@ -37,7 +36,7 @@ public class OrderFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         binding = DataBindingUtil.bind(view);
-        viewModel = ViewModelProviders.of(requireActivity()).get(OrderViewModel.class);
+        viewModel = ViewModelProviders.of(requireActivity()).get(MainsViewModel.class);
         binding.setViewModel(viewModel);
         binding.setLifecycleOwner(requireActivity());
 

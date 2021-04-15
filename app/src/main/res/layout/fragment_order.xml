@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:bind="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+
+        <variable
+            name="layout"
+            type="int" />
+
         <variable
             name="viewModel"
-            type="com.beyondinc.commandcenter.viewmodel.OrderViewModel" />
+            type="com.beyondinc.commandcenter.viewmodel.MainsViewModel" />
     </data>
 
     <LinearLayout
@@ -24,7 +29,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="0"
-                android:background="@color/white">
+                android:background="@color/white"
+                app:layout="@{viewModel.layer == 1? 1 : 0 }">
 
                 <TextView
                     android:layout_width="0dp"

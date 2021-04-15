@@ -25,21 +25,20 @@ public class ItemViewModel extends ViewModel {
             adapter = new RecyclerAdapter(this);
         }
         insertLogic();
-
     }
 
     public void insertLogic() {
         for (int i = 0; i < 30; i++) {
             Orderdata memo = new Orderdata();
             memo.setId(i);
-            memo.setUsetime("포장완료");
+            memo.setUsetime(i + "분");
             memo.setResttime(i+" 초");
             memo.setPay("카드");
             memo.setTitle("면곡당 " + i + "호점");
             memo.setAdress("장안동 " + i + "번지");
             memo.setPoi(i + "편한세상");
             memo.setRider(i+" km");
-            memo.setWork("완료");
+            memo.setWork("픽업");
             memo.setPaywon(i + " 원");
             memo.setDelay(i);
             items.add(memo);
