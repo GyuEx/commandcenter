@@ -16,4 +16,13 @@
     <color name="orange_press">#FFFAC050</color>
     <color name="orange_gradian_press">#FFFAA030</color>
 
+    <color name="lightgray">#FFF1F1F1</color>
+
+    <color name="brief">#FFFF0000</color>
+    <color name="recive">#FFFFB600</color>
+    <color name="cancle">#FF707070</color>
+    <color name="complite">#FF005CFF</color>
+    <color name="pickup">#FF1C8B00</color>
+
+
 </resources>

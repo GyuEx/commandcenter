@@ -5,6 +5,15 @@
 
     <data>
         <variable
+            name="text_color_mainbtn1"
+            type="android.R.integer" />
+        <variable
+            name="text_color_mainbtn2"
+            type="android.R.integer" />
+        <variable
+            name="text_color_mainbtn3"
+            type="android.R.integer" />
+        <variable
             name="viewModel"
             type="com.beyondinc.commandcenter.viewmodel.MainsViewModel" />
     </data>
@@ -24,9 +33,10 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1">
+                    android:layout_weight="2">
 
                     <Button
+                        android:id="@+id/mB01"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
@@ -39,6 +49,7 @@
                     </Button>
 
                     <TextView
+                        android:id="@+id/mB02"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="6"
@@ -50,6 +61,7 @@
                     </TextView>
 
                     <Button
+                        android:id="@+id/mB03"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="3"
@@ -67,99 +79,138 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1">
-
-                    <TextView
-                        android:id="@+id/btn"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:textSize="25dp"
-                        android:textStyle="bold"
-                        android:onClick="@{v->viewModel.Layout()}"
-                        android:text="배정">
-                    </TextView>
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:textSize="25dp"
-                        android:textStyle="bold"
-                        android:text="가맹점">
-                    </TextView>
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:textSize="25dp"
-                        android:textStyle="bold"
-                        android:text="라이더">
-                    </TextView>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:background="@color/white">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:layout_marginRight="0dp"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginBottom="0dp"
-                        android:layout_marginLeft="15dp"
-                        android:text="◀"
-                        android:textSize="30dp"
-                        android:textColor="@color/black">
-                    </TextView>
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="6"
-                        android:gravity="center"
-                        android:textSize="25dp"
-                        android:textStyle="bold"
-                        android:text="배정하기"
-                        android:layout_marginLeft="55dp"
-                        android:layout_marginTop="5dp"
-                        android:background="@color/black"
-                        android:textColor="@color/white">
-                    </TextView>
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="3"
-                        android:gravity="center"
-                        android:textSize="30dp"
-                        android:layout_marginRight="5dp">
-                    </TextView>
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="10"
-                    android:background="@color/white">
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
                     android:layout_weight="2">
+
+                    <TextView
+                        android:id="@+id/mB04"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:onClick="@{v->viewModel.setLayoutBtn1()}"
+                        android:text="배정"
+                        app:text_color_mainbtn1="@{viewModel.layer}">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/mB05"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:onClick="@{v->viewModel.setLayoutBtn2()}"
+                        android:text="가맹점"
+                        app:text_color_mainbtn2="@{viewModel.layer}">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/mB06"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:onClick="@{v->viewModel.setLayoutBtn3()}"
+                        android:text="라이더"
+                        app:text_color_mainbtn3="@{viewModel.layer}">
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mL01"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="20"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="2">
+
+                    <CheckBox
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:button="@drawable/state_btn_1"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/white"
+                        android:text="500"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"/>
+
+                    <CheckBox
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:button="@drawable/state_btn_2"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/white"
+                        android:text="500"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"/>
+
+                    <CheckBox
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:button="@drawable/state_btn_3"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/white"
+                        android:text="500"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"/>
+
+                    <CheckBox
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:button="@drawable/state_btn_4"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/white"
+                        android:text="500"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"/>
+
+                    <CheckBox
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:button="@drawable/state_btn_5"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/white"
+                        android:text="500"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        android:layout_weight="1"/>
+
                 </LinearLayout>
 
         </LinearLayout>

@@ -10,18 +10,26 @@ import androidx.lifecycle.ViewModel;
 
 public class MainsViewModel extends ViewModel {
 
-    public MutableLiveData<Boolean> layer = new MutableLiveData<>();
+    public MutableLiveData<Integer> layer = new MutableLiveData<>();
 
     String Tag = "MainsViewModel";
 
     public MainsViewModel(){
         Log.e(Tag,"ViewModel Enable");
-        layer.postValue(false);
+        layer.postValue(1);
     }
 
-    public void Layout()
+    public void setLayoutBtn1()
     {
-        layer.postValue(true);
+        layer.postValue(1);
+    }
+    public void setLayoutBtn2()
+    {
+        layer.postValue(2);
+    }
+    public void setLayoutBtn3()
+    {
+        layer.postValue(3);
     }
 
 }
